@@ -33,11 +33,7 @@ async def send_quote():
 
     quote = quotes[index]
 
-    message = f"""
-🌿 Silent Quote
-
-{quote}
-"""
+    message = quote
 
     await bot.send_message(
         chat_id=CHAT_ID,
@@ -56,6 +52,6 @@ async def main():
         except Exception as e:
             print(e)
 
-        await asyncio.sleep(7200)
+        await asyncio.sleep(60)
 
 asyncio.run(main())
